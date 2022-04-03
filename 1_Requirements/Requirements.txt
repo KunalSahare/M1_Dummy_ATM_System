@@ -1,0 +1,8 @@
+Requirements to run the project are :
+1> Windows:
+    i> A gcc compiler(Mingw) or Visual Studio
+    ii> permissions to read,write and execute within the directory the program resides in.
+
+2> Mac Or Linux:
+    i> clang or any other gcc compiler.
+    ii> permissions to read,write and execute within the directory the program resides in.

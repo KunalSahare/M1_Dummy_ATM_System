@@ -1,0 +1,6 @@
+(123456789,Kun@l,Kunal,Sahare,6789,Savings,6000.00,Nagpur,1379986154)
+(4567834,Aniket,Aniket,Sorte,7857,Savings,5000.00,Nagpur,347634545)
+(345678,Augus456tin,Augustine,Stepehns,7956,Savings,500.00,Surat,340376789)
+(567478,Mih!r,Mihir,Bhokre,4567,Current,4000.00,Nagpur,123456789)
+(789653,Shub9873ham,Shubham,Sahare,9998,Current,3800.00,Mumbai,3924735295)
+(465768,Par@s,Paras,Hazare,9098,Current,1000.00,Chandrapur,12345678)

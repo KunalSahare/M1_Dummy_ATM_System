@@ -1,0 +1,241 @@
+\hypertarget{main_a_t_m_8c}{}\doxysection{main\+ATM.\+c File Reference}
+\label{main_a_t_m_8c}\index{mainATM.c@{mainATM.c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structbank__acc}{bank\+\_\+acc}}
+\begin{DoxyCompactList}\small\item\em a struct named \textquotesingle{}\mbox{\hyperlink{structbank__acc}{bank\+\_\+acc}}\textquotesingle{} is being created so the data taken from the user can be read and written to the database2.\+txt file in a \textquotesingle{}STRUCTURED manner\textquotesingle{}.Every operation will be done through this structure \+:-\/ reading,writing,appending. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_a_t_m_8c_a5eb97d18200407a6c33e2662e6428011}{new\+\_\+\+User\+\_\+\+Registration}} ()
+\begin{DoxyCompactList}\small\item\em line 54 -\/ 59 are all function declarations Each function will be explained when they are encountered below. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_a_t_m_8c_a420b6d51aca4eabe40e1dcd4e02898be}{deposit}} (int id, int p)
+\begin{DoxyCompactList}\small\item\em void \mbox{\hyperlink{main_a_t_m_8c_a420b6d51aca4eabe40e1dcd4e02898be}{deposit(int id,int p)}} When the user has been authenticated and wants to perform the deposit action on their account. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_a_t_m_8c_a0762848bd2b8f2475e7b9469bc164ab4}{withdraw}} (int id)
+\begin{DoxyCompactList}\small\item\em void withdrawl(int id) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_a_t_m_8c_afe152c4488471280bfb8eec5c66dfd6e}{check}} ()
+\begin{DoxyCompactList}\small\item\em Check() function simply checkes for existing user data can is accessed when New User case is selected. if the entered account Number exits then the user is promted to select one of the options. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_a_t_m_8c_a4958e2d854c6c2719ab60f589a24e1b2}{display}} (int id, int p)
+\begin{DoxyCompactList}\small\item\em Displays the content of the Authorized user. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_a_t_m_8c_a4f17afc4a08d13979efc4da7a3fc5942}{existinguser}} ()
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{main_a_t_m_8c_a4f17afc4a08d13979efc4da7a3fc5942}{existinguser()}} function is accessed when the user selects the second option or when the user enters a matching account id in the \textquotesingle{}New user\textquotesingle{} section. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_a_t_m_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em The main function is where the program starts from . The user is shown the initial screen of \textquotesingle{}Welcome to the ATM\textquotesingle{}, and asked to perform one of the diplayed functions. A switch case has been implemented whenever the user opts to select one of the options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_a_t_m_8c_a073a47ca21300835133a077fe35dd786}\label{main_a_t_m_8c_a073a47ca21300835133a077fe35dd786}} 
+const char $\ast$ {\bfseries PERSON\+\_\+\+FORMAT\+\_\+\+IN} = \char`\"{}(\%d,\%\mbox{[}$^\wedge$,\mbox{]},\%\mbox{[}$^\wedge$,\mbox{]},\%\mbox{[}$^\wedge$,\mbox{]},\%d,\%\mbox{[}$^\wedge$,\mbox{]},\%f,\%\mbox{[}$^\wedge$,\mbox{]},\%ld)\textbackslash{}n\char`\"{}
+\begin{DoxyCompactList}\small\item\em //\+Person\+\_\+\+FORMAT\+\_\+\+IN is used for the deserialization of the data(basically reading data from the file in the manner specified in the Person\+\_\+format\+\_\+in). This format is able to distinguish between two Strings because of \textquotesingle{},\textquotesingle{} in between them,meaning whenever a \textquotesingle{},\textquotesingle{} is encountered the next string will be stored in the next structure variable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_a_t_m_8c_a1760d12806e3d783ddcf1c4e635a496f}\label{main_a_t_m_8c_a1760d12806e3d783ddcf1c4e635a496f}} 
+const char $\ast$ {\bfseries PERSON\+\_\+\+FORMAT\+\_\+\+OUT} = \char`\"{}(\%d,\%s,\%s,\%s,\%d,\%s,\%.\+2f,\%s,\%ld)\textbackslash{}n\char`\"{}
+\begin{DoxyCompactList}\small\item\em //\+PERSON\+\_\+\+FORMAT\+\_\+\+OUT is used for the serialization(writing the stream of bytes to the file) of the data which the user inputs into the database2.\+txt file(basically writing data to the file in the manner specified in the Person\+\_\+format\+\_\+out). The data is first stored into the structure Variables then it is written to the database2.\+txt file using the format specified. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Kunal Narendra Sahare 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+March 30 2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_a_t_m_8c_afe152c4488471280bfb8eec5c66dfd6e}\label{main_a_t_m_8c_afe152c4488471280bfb8eec5c66dfd6e}} 
+\index{mainATM.c@{mainATM.c}!check@{check}}
+\index{check@{check}!mainATM.c@{mainATM.c}}
+\doxysubsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily int check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check() function simply checkes for existing user data can is accessed when New User case is selected. if the entered account Number exits then the user is promted to select one of the options. 
+
+1\texorpdfstring{$>$}{>} when the user presses \textquotesingle{}1\textquotesingle{} then the user will be sent to the \mbox{\hyperlink{main_a_t_m_8c_a4f17afc4a08d13979efc4da7a3fc5942}{existinguser()}} function where the user will login.
+
+2\texorpdfstring{$>$}{>} when the user presses \textquotesingle{}2\textquotesingle{} then the user will be sent to the new user registration() function where the user will give the details to register as a new user ,after all the values are successfully added the values will be then added to the database2.\+txt file.
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+while(fscanf) reads the entire file from start to END.
+
+checking whether the acc\+\_\+accno is already present within the database2.\+txt or not.\mbox{\Hypertarget{main_a_t_m_8c_a420b6d51aca4eabe40e1dcd4e02898be}\label{main_a_t_m_8c_a420b6d51aca4eabe40e1dcd4e02898be}} 
+\index{mainATM.c@{mainATM.c}!deposit@{deposit}}
+\index{deposit@{deposit}!mainATM.c@{mainATM.c}}
+\doxysubsubsection{\texorpdfstring{deposit()}{deposit()}}
+{\footnotesize\ttfamily void deposit (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{p }\end{DoxyParamCaption})}
+
+
+
+void \mbox{\hyperlink{main_a_t_m_8c_a420b6d51aca4eabe40e1dcd4e02898be}{deposit(int id,int p)}} When the user has been authenticated and wants to perform the deposit action on their account. 
+
+This is the detailed description.
+
+Step wise changes\+:
+
+Since File handling can only perform read,write and append operations modification of the original file becomes a challenge. But update functionality can be achieved through a series of operations done below.
+
+1\texorpdfstring{$>$}{>}First the database2.\+txt file is completely read through the fscanf function , all the fields which are not matching from the user account number and pin are stored into a temporary file called \textquotesingle{}temp.\+txt\textquotesingle{}.
+
+2\texorpdfstring{$>$}{>} After all the non matching fileds are read from the database2.\+txt and then stored into temp.\+txt. The one field that matches with the acc\+\_\+no and pin are then accessed and the user is prompted to enter the amount of money that needs to be deposited.
+
+3\texorpdfstring{$>$}{>} New amount of money is stored into a new variable and then through the structure \mbox{\hyperlink{structbank__acc}{bank\+\_\+acc}} the acc\+\_\+balance is accessed and the amount is changed in the acc\+\_\+balance variable .This acc\+\_\+balance will be now written into the temp.\+txt file by using the fprintf function().
+
+4\texorpdfstring{$>$}{>} This changed value will now be written into the temp.\+txt file and the original database2.\+txt contents will be deleted , this operation is done through opening the file in \textquotesingle{}write\textquotesingle{} mode and closing it without adding any values in it.
+
+5\texorpdfstring{$>$}{>} Now the original database2.\+txt file has been completely wiped but not deleted, but the temp.\+txt contains all the fields , therefore all the contents of the temp.\+txt file will be copied into the database2.\+txt and the temp file will be wiped and then deleted.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & This parameter is taking the User Account number. \\
+\hline
+{\em p} & This parameter is taking the user\textquotesingle{}s pin. \\
+\hline
+\end{DoxyParams}
+creating a new \mbox{\hyperlink{structbank__acc}{bank\+\_\+acc}} structure variable.
+
+opening the files database2.\+txt and temp.\+txt
+
+closing the files
+
+deleting all the contents of the database2.\+txt so that it can be rewritten after the changes are done.
+
+reopening both database2.\+txt file and temp.\+txt file.
+
+reading the contents of the temp file and writing them to the original database2.\+txt file.
+
+closing the files again.
+
+deleting the file temp.\+txt\mbox{\Hypertarget{main_a_t_m_8c_a4958e2d854c6c2719ab60f589a24e1b2}\label{main_a_t_m_8c_a4958e2d854c6c2719ab60f589a24e1b2}} 
+\index{mainATM.c@{mainATM.c}!display@{display}}
+\index{display@{display}!mainATM.c@{mainATM.c}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void display (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{p }\end{DoxyParamCaption})}
+
+
+
+Displays the content of the Authorized user. 
+
+This function simply matches the the account Number from the user with the account number in the database2.\+txt , same for the pin number, if both the fields match then the information regarding the user is displayed on the screen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id parameter is the Account holder\textquotesingle{}s account Number. \\
+\hline
+{\em p} & The p parameter is the Account\textquotesingle{}s pin. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_a_t_m_8c_a4f17afc4a08d13979efc4da7a3fc5942}\label{main_a_t_m_8c_a4f17afc4a08d13979efc4da7a3fc5942}} 
+\index{mainATM.c@{mainATM.c}!existinguser@{existinguser}}
+\index{existinguser@{existinguser}!mainATM.c@{mainATM.c}}
+\doxysubsubsection{\texorpdfstring{existinguser()}{existinguser()}}
+{\footnotesize\ttfamily int existinguser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The \mbox{\hyperlink{main_a_t_m_8c_a4f17afc4a08d13979efc4da7a3fc5942}{existinguser()}} function is accessed when the user selects the second option or when the user enters a matching account id in the \textquotesingle{}New user\textquotesingle{} section. 
+
+This is the detailed one. More deatails
+
+The user enters the the account Number and pin if they exists then the user is given a different set of switch cases. These are\+:-\/
+
+1\texorpdfstring{$>$}{>} Displays the user\textquotesingle{}s Information
+
+2\texorpdfstring{$>$}{>} Deposit Money(\+Deposits the money)
+
+3\texorpdfstring{$>$}{>} Withdraw Money(\char`\"{}\+Withdrawl of the money\char`\"{})
+
+4\texorpdfstring{$>$}{>} Exit the function.
+
+if the entered account No and password does not exist in the database then the user will be prompted with the message \textquotesingle{}Do you want to register as a new user\textquotesingle{} 1 for \textquotesingle{}yes\textquotesingle{} and 2 for \textquotesingle{}No\textquotesingle{}.
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+if the account id and pin matches then the user is presented with a new switch case statements.\mbox{\Hypertarget{main_a_t_m_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_a_t_m_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{mainATM.c@{mainATM.c}!main@{main}}
+\index{main@{main}!mainATM.c@{mainATM.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The main function is where the program starts from . The user is shown the initial screen of \textquotesingle{}Welcome to the ATM\textquotesingle{}, and asked to perform one of the diplayed functions. A switch case has been implemented whenever the user opts to select one of the options. 
+
+This is the detailed one. More details A switch case has been implemented, so the user chooses one of the options. 1.\texorpdfstring{$>$}{>} When the user presses \textquotesingle{}1\textquotesingle{} the user will be taken to the Check() function which will ask the user for a account id, which will be checked across the database2.\+txt and if a match is found then the user is prompted to either log in or they are given a choice to register as a new user, but if a match is not found within the database2.\+txt file the user is direclty taken to the New user Registration function.
+
+2.\texorpdfstring{$>$}{>} The Second option is for the existing user, when the user presses \textquotesingle{}2\textquotesingle{} the user is asked to enter their account id and account pin which will be checked across the database2.\+txt and when a match is found the the user is redirected to a set of switch cases which are only accessed when an id match is found.
+
+3.\texorpdfstring{$>$}{>} The Third option is for the Exit functoin which will simply exit entire program.
+
+\begin{DoxyNote}{Note}
+The program will not terminate until and unless the user selects to exit the program ,but once a user is authenticated they are presented with a new set of options which will let the user to manipulate the \textquotesingle{}data\textquotesingle{},but only relating to that specific user only and not anyone else.
+\end{DoxyNote}
+\begin{DoxyAttention}{Attention}
+inputing alphabetic or wrong numberic values will lead to the function displaying \textquotesingle{}Invalid Input\textquotesingle{}
+\end{DoxyAttention}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_a_t_m_8c_a5eb97d18200407a6c33e2662e6428011}\label{main_a_t_m_8c_a5eb97d18200407a6c33e2662e6428011}} 
+\index{mainATM.c@{mainATM.c}!new\_User\_Registration@{new\_User\_Registration}}
+\index{new\_User\_Registration@{new\_User\_Registration}!mainATM.c@{mainATM.c}}
+\doxysubsubsection{\texorpdfstring{new\_User\_Registration()}{new\_User\_Registration()}}
+{\footnotesize\ttfamily void new\+\_\+\+User\+\_\+\+Registration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+line 54 -\/ 59 are all function declarations Each function will be explained when they are encountered below. 
+
+Void new\+\_\+\+User\+\_\+\+Registration.
+
+when no existing user is detected and user wants to register as a new user, new\+\_\+\+User\+\_\+\+Rgistration() is called. \mbox{\Hypertarget{main_a_t_m_8c_a0762848bd2b8f2475e7b9469bc164ab4}\label{main_a_t_m_8c_a0762848bd2b8f2475e7b9469bc164ab4}} 
+\index{mainATM.c@{mainATM.c}!withdraw@{withdraw}}
+\index{withdraw@{withdraw}!mainATM.c@{mainATM.c}}
+\doxysubsubsection{\texorpdfstring{withdraw()}{withdraw()}}
+{\footnotesize\ttfamily void withdraw (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+void withdrawl(int id) 
+
+When the user has been authenticated and wants to perform the deposit action on their account.
+
+This is the detailed description.
+
+Step wise changes\+:
+
+Since File handling can only perform read,write and append operations modification of the original file becomes a challenge. But update functionality can be achieved through a series of operations done below.
+
+1\texorpdfstring{$>$}{>}First the database2.\+txt file is completely read through the fscanf function , all the fields which are not matching from the user account number and pin are stored into a temporary file called \textquotesingle{}temp2.\+txt\textquotesingle{}.
+
+2\texorpdfstring{$>$}{>} After all the non matching fileds are read from the database2.\+txt and then stored into temp2.\+txt. The one field that matches with the acc\+\_\+no is then accessed and the user is prompted to enter the amount of money that needs to be withdrawn.
+
+3\texorpdfstring{$>$}{>} The amount of money to be withdrawn is stored into a new variable and then through the structure \mbox{\hyperlink{structbank__acc}{bank\+\_\+acc}} the acc\+\_\+balance is accessed and the amount is changed in the acc\+\_\+balance variable . A check is performed if the entered amount of money to be withdrawn is more than the Account Holder\textquotesingle{}s balance than the user will be prompted to \textquotesingle{}Enter lower amount of money to be withdrawn \textquotesingle{}. Once acceptable amount is withdrawn from the account then the acc\+\_\+balance will be now written into the temp2.\+txt file by using the fprintf function().
+
+4\texorpdfstring{$>$}{>} This changed value will now be written into the temp2.\+txt file and the original database2.\+txt contents will be deleted , this operation is done through opening the file in \textquotesingle{}write\textquotesingle{} mode and closing it without adding any values in it.
+
+5\texorpdfstring{$>$}{>} Now the original database2.\+txt file has been completely wiped but not deleted, but the temp2.\+txt contains all the fields , therefore all the contents of the temp2.\+txt file will be copied into the database2.\+txt and the temp2 file will be wiped and then deleted.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & This parameter is taking the User Account number. \\
+\hline
+\end{DoxyParams}
+reading all the contents of the database2.\+txt file using the while(fscanf()), all the non-\/matching id values are copied to the temp2.\+txt file and when there is a match for one of the id the then the user is asked to enter the amount of money to be withdrawn.
+
+closing the files database2.\+txt and temp2.\+txt.
+
+deleting all the contents of the database2.\+txt so that it can be rewritten after the changes are done.
+
+reopening the files and reading all the contents of the temp2.\+txt and writing it into the original database2.\+txt file.
+
+closing the files.
+
+removing the temp2.\+txt(deleting) from the directory.

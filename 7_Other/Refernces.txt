@@ -1,0 +1,4 @@
+To understand Serialisation and Deserialisation using File handling in C:- https://youtu.be/QrKpqdBiFRI
+
+
+Understanding C :- https://devdocs.io/c/
